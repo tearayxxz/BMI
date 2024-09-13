@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">BMI Calculator</h1>
+      <form id="bmiForm">
+        <label for="Height">Height (cm)</label>
+        <input
+          type="number"
+          id="Height"
+          name="Height"
+          placeholder="Your height (in cm)"
+          
+        />
+        <span id="heightError" class="error-message"></span>
+        <label for="Weight">Weight (kg)</label>
+        <input
+          type="number"
+          id="Weight"
+          name="Weight"
+          placeholder="Your weight (in kg)"
+          
+        />
+        <span id="weightError" class="error-message"></span>
+        <input type="submit" value="Calculate BMI" />
+      </form>
+      <div class="result">
+        <h1 class="resultTitle">BMI</h1>
+        <h1 id="result">0.00</h1>
+        <p id="category">Category:</p>
+        <p id="risk">Risk Level:</p>
+      </div>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>BMI (kg/m²)</th>
+              <th>Category</th>
+              <th>Risk Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&lt; 18.50</td>
+              <td>Underweight / Thin</td>
+              <td>Higher than average</td>
+            </tr>
+            <tr>
+              <td>18.50 - 22.90</td>
+              <td>Normal (Healthy)</td>
+              <td>Same as average</td>
+            </tr>
+            <tr>
+              <td>23 - 24.90</td>
+              <td>Overweight / Obesity Class 1</td>
+              <td>Risk Level 1</td>
+            </tr>
+            <tr>
+              <td>25 - 29.90</td>
+              <td>Obese / Obesity Class 2</td>
+              <td>Risk Level 2</td>
+            </tr>
+            <tr>
+              <td>&gt; 30</td>
+              <td>Severely Obese / Obesity Class 3</td>
+              <td>Risk Level 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
